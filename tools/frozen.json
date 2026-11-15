@@ -1,0 +1,65 @@
+{
+ "S47 topic block 18": [
+  [
+   "Bitmap Heap Scan on big_customers (actual rows=2.00 loops=1)"
+  ],
+  [
+   "  Recheck Cond: (email ~~ '%9999%'::text)"
+  ],
+  [
+   "  Rows Removed by Index Recheck: 36"
+  ],
+  [
+   "  Heap Blocks: exact=20"
+  ],
+  [
+   "  ->  Bitmap Index Scan on big_customers_email_trgm_idx (actual rows=38.00 loops=1)"
+  ],
+  [
+   "        Index Cond: (email ~~ '%9999%'::text)"
+  ],
+  [
+   "        Index Searches: 1"
+  ]
+ ],
+ "S47 Q8": [
+  [
+   "Bitmap Heap Scan on big_customers (actual rows=11.00 loops=1)"
+  ],
+  [
+   "  Recheck Cond: (email ~~* '%user1999%'::text)"
+  ],
+  [
+   "  Heap Blocks: exact=2"
+  ],
+  [
+   "  ->  Bitmap Index Scan on big_customers_email_trgm_idx (actual rows=11.00 loops=1)"
+  ],
+  [
+   "        Index Cond: (email ~~* '%user1999%'::text)"
+  ],
+  [
+   "        Index Searches: 1"
+  ]
+ ],
+ "S54 Q13": [
+  [
+   "Bitmap Heap Scan on big_customers (actual rows=1670.00 loops=1)"
+  ],
+  [
+   "  Recheck Cond: (full_name ~~* '%reddy%'::text)"
+  ],
+  [
+   "  Heap Blocks: exact=184"
+  ],
+  [
+   "  ->  Bitmap Index Scan on big_customers_name_trgm_idx (actual rows=1670.00 loops=1)"
+  ],
+  [
+   "        Index Cond: (full_name ~~* '%reddy%'::text)"
+  ],
+  [
+   "        Index Searches: 1"
+  ]
+ ]
+}

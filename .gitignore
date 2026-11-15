@@ -1,0 +1,8 @@
+# Third-party books kept here for reading; not ours to publish
+*.pdf
+
+# Node / editor / OS clutter
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
